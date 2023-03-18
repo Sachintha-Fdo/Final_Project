@@ -82,8 +82,15 @@ namespace Final_Project
 
         private void receiverDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 rd = new Form6();
+            FormR rd = new FormR();
             rd.Show();
+            this.Hide();
+        }
+
+        private void receivedPackagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
             this.Hide();
         }
     }

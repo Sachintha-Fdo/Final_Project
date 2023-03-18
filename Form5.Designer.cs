@@ -114,6 +114,7 @@
             this.receivedPackagesToolStripMenuItem.Name = "receivedPackagesToolStripMenuItem";
             this.receivedPackagesToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.receivedPackagesToolStripMenuItem.Text = "Packages Received ";
+            this.receivedPackagesToolStripMenuItem.Click += new System.EventHandler(this.receivedPackagesToolStripMenuItem_Click);
             // 
             // packageSentToolStripMenuItem
             // 

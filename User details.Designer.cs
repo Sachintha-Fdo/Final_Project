@@ -119,6 +119,7 @@
             this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox3.Location = new System.Drawing.Point(268, 140);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 7;
             // 
@@ -127,6 +128,7 @@
             this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox4.Location = new System.Drawing.Point(268, 187);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 8;
             // 
@@ -202,7 +204,7 @@
             this.home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.home.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.home.ForeColor = System.Drawing.Color.White;
-            this.home.Location = new System.Drawing.Point(360, 376);
+            this.home.Location = new System.Drawing.Point(31, 390);
             this.home.Name = "home";
             this.home.Size = new System.Drawing.Size(50, 48);
             this.home.TabIndex = 15;

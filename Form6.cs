@@ -12,13 +12,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Final_Project
 {
-    public partial class Form6 : Form
+    public partial class FormR : Form
     {
         MySqlConnection con = new MySqlConnection("Server=129.213.45.115;Database=PROJECT_DB;Uid=root;Pwd=sachintha@1998;");
         MySqlCommand cmd = new MySqlCommand();
         MySqlDataAdapter da = new MySqlDataAdapter();  
         DataTable dt = new DataTable(); 
-        public Form6()
+        public FormR()
         {
             InitializeComponent();
 
@@ -159,6 +159,20 @@ namespace Final_Project
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+        }
+
+        private void receivedPackagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
+            this.Hide();
+        }
+
+        private void packageSentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();  
+            form5.ShowDialog();
+            this.Hide();
         }
     }
 }

@@ -362,6 +362,7 @@
             this.receivedPackagesToolStripMenuItem.Name = "receivedPackagesToolStripMenuItem";
             this.receivedPackagesToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.receivedPackagesToolStripMenuItem.Text = "Packages Received ";
+            this.receivedPackagesToolStripMenuItem.Click += new System.EventHandler(this.receivedPackagesToolStripMenuItem_Click);
             // 
             // packageSentToolStripMenuItem
             // 
@@ -369,6 +370,7 @@
             this.packageSentToolStripMenuItem.Name = "packageSentToolStripMenuItem";
             this.packageSentToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.packageSentToolStripMenuItem.Text = "Package sent";
+            this.packageSentToolStripMenuItem.Click += new System.EventHandler(this.packageSentToolStripMenuItem_Click);
             // 
             // receiverDetailsToolStripMenuItem
             // 

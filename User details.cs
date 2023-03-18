@@ -24,7 +24,7 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        private void add_Click(object sender, EventArgs e)
+        private void add_Click(object sender, EventArgs e) //ADD button
         {
             con.Open();
 
@@ -44,7 +44,7 @@ namespace Final_Project
                 MessageBox.Show("Passwords do not match.");
             else if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Username is already existed!");
+                MessageBox.Show("User is already existed!");
             }
 
             else
@@ -79,7 +79,7 @@ namespace Final_Project
         
         }
 
-        private void update_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e) // Update button
         {
             con.Open();
 
@@ -123,7 +123,7 @@ namespace Final_Project
             }
             }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void delete_Click(object sender, EventArgs e) /// Delete button
         {
             con.Open();
             MySqlCommand cmd = new MySqlCommand("DELETE FROM user1 WHERE name = @name", con);
