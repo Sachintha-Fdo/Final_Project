@@ -111,30 +111,26 @@ namespace Final_Project
                 if (receiverEmail != null)
                 {
 
-                    MailMessage message = new MailMessage();
-                    message.From = new MailAddress("upltommy23@gmail.com");
-                    message.To.Add(receiverEmail);
-
-                    /* if (receiverEmail != null)
+                    var mySmtpClient = new SmtpClient("smtp.gmail.com")
                     {
-                        message.To.Add(receiverEmail);
-                    }*/
+                        Port = 587,
+                        Credentials = new NetworkCredential("upltommy23@gmail.com", "ympcfhajtpjbrwzq"),
+                        EnableSsl = true,
+                    };
 
-
-
-                    message.Subject = "Auto-generated email";
-                    message.Body = "This is an auto-generated email sent from ASP.NET C#. from SMTP01 owner of the server: sachinthaF";
-
-                    // Create a SmtpClient object and set its properties
-                    SmtpClient smtp = new SmtpClient("upltommy23@gmail.com");
-                    smtp.Port = 587;
-                    smtp.Credentials = new NetworkCredential("upltommy23@gmail.com", "ympcfhajtpjbrwzq");
-                    smtp.EnableSsl = true;
+                    var mailMessage = new MailMessage
+                    {
+                        From = new MailAddress("upltommy23@gmail.com"),
+                        Subject = "Auto-generated email",
+                        Body = "This is an auto-generated email sent from ASP.NET C#. from SMTP01 owner of the server: sachinthaF",
+                        IsBodyHtml = true,
+                    };
+                    mailMessage.To.Add(new MailAddress(receiverEmail));
 
                     try
                     {
                         // Send the email
-                        smtp.Send(message);
+                        mySmtpClient.Send(mailMessage);
                         Console.WriteLine("Email sent successfully.");
                     }
                     catch (SmtpException ex)
