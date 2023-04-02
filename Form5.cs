@@ -93,5 +93,17 @@ namespace Final_Project
             form4.Show();
             this.Hide();
         }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 f7 = new Form7();
+            f7.Show();
+            this.Hide();
+        }
     }
 }

@@ -177,8 +177,13 @@ namespace Final_Project
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7(); 
-            form7.ShowDialog();
+           
+        }
+
+        private void receivedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 f7 = new Form7();
+            f7.Show();
             this.Hide();
         }
     }

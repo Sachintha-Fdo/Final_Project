@@ -35,6 +35,8 @@
             this.packageSentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiverDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.receivedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,11 +118,27 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.receivedToolStripMenuItem,
+            this.sentToolStripMenuItem});
             this.searchToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.searchToolStripMenuItem.Text = "Search ";
+            // 
+            // receivedToolStripMenuItem
+            // 
+            this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
+            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.receivedToolStripMenuItem.Text = "Received";
+            this.receivedToolStripMenuItem.Click += new System.EventHandler(this.receivedToolStripMenuItem_Click);
+            // 
+            // sentToolStripMenuItem
+            // 
+            this.sentToolStripMenuItem.Name = "sentToolStripMenuItem";
+            this.sentToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sentToolStripMenuItem.Text = "Sent";
             // 
             // textBox1
             // 
@@ -149,7 +167,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form7";
-            this.Text = "Form7";
+            this.Text = "Search Received Packages";
             this.Load += new System.EventHandler(this.Form7_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -170,5 +188,7 @@
         private ToolStripMenuItem searchToolStripMenuItem;
         private TextBox textBox1;
         private Button Search;
+        private ToolStripMenuItem receivedToolStripMenuItem;
+        private ToolStripMenuItem sentToolStripMenuItem;
     }
 }

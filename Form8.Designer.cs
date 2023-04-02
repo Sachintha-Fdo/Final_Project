@@ -1,6 +1,6 @@
 ﻿namespace Final_Project
 {
-    partial class HomePage
+    partial class Form8
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.recordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receivedPackagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +36,11 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receivedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Search = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,8 +59,8 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(795, 33);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.TabIndex = 56;
             this.menuStrip1.TabStop = true;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,23 +82,22 @@
             this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
             this.recordsToolStripMenuItem.Size = new System.Drawing.Size(190, 29);
             this.recordsToolStripMenuItem.Text = "Manual Data Entry";
-            this.recordsToolStripMenuItem.Click += new System.EventHandler(this.recordsToolStripMenuItem_Click);
             // 
             // receivedPackagesToolStripMenuItem
             // 
+            this.receivedPackagesToolStripMenuItem.BackColor = System.Drawing.Color.CornflowerBlue;
             this.receivedPackagesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.receivedPackagesToolStripMenuItem.Name = "receivedPackagesToolStripMenuItem";
             this.receivedPackagesToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.receivedPackagesToolStripMenuItem.Text = "Packages Received ";
-            this.receivedPackagesToolStripMenuItem.Click += new System.EventHandler(this.receivedPackagesToolStripMenuItem_Click);
             // 
             // packageSentToolStripMenuItem
             // 
+            this.packageSentToolStripMenuItem.BackColor = System.Drawing.Color.CornflowerBlue;
             this.packageSentToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.packageSentToolStripMenuItem.Name = "packageSentToolStripMenuItem";
             this.packageSentToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.packageSentToolStripMenuItem.Text = "Package sent";
-            this.packageSentToolStripMenuItem.Click += new System.EventHandler(this.packageSentToolStripMenuItem_Click);
             // 
             // receiverDetailsToolStripMenuItem
             // 
@@ -104,7 +106,6 @@
             this.receiverDetailsToolStripMenuItem.Name = "receiverDetailsToolStripMenuItem";
             this.receiverDetailsToolStripMenuItem.Size = new System.Drawing.Size(162, 29);
             this.receiverDetailsToolStripMenuItem.Text = "Receiver Details";
-            this.receiverDetailsToolStripMenuItem.Click += new System.EventHandler(this.receiverDetailsToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -116,51 +117,77 @@
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.searchToolStripMenuItem.Text = "Search ";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // receivedToolStripMenuItem
             // 
             this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
-            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.receivedToolStripMenuItem.Text = "Received";
-            this.receivedToolStripMenuItem.Click += new System.EventHandler(this.receivedToolStripMenuItem_Click);
             // 
             // sentToolStripMenuItem
             // 
             this.sentToolStripMenuItem.Name = "sentToolStripMenuItem";
-            this.sentToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sentToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.sentToolStripMenuItem.Text = "Sent";
-            this.sentToolStripMenuItem.Click += new System.EventHandler(this.sentToolStripMenuItem_Click);
             // 
-            // HomePage
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(325, 55);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.TabIndex = 60;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(-3, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(293, 23);
+            this.textBox1.TabIndex = 59;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(803, 330);
+            this.dataGridView1.TabIndex = 58;
+            // 
+            // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(795, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.DoubleBuffered = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "HomePage";
-            this.Text = "Home";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Name = "Form8";
+            this.Text = "Search Sent Packages";
+            this.Load += new System.EventHandler(this.Form8_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private ToolStripMenuItem recordsToolStripMenuItem;
-        private ToolStripMenuItem receiverDetailsToolStripMenuItem;
-        private ToolStripMenuItem searchToolStripMenuItem;
+
         public MenuStrip menuStrip1;
+        private ToolStripMenuItem recordsToolStripMenuItem;
         private ToolStripMenuItem receivedPackagesToolStripMenuItem;
         private ToolStripMenuItem packageSentToolStripMenuItem;
+        private ToolStripMenuItem receiverDetailsToolStripMenuItem;
+        private ToolStripMenuItem searchToolStripMenuItem;
         private ToolStripMenuItem receivedToolStripMenuItem;
         private ToolStripMenuItem sentToolStripMenuItem;
+        private Button Search;
+        private TextBox textBox1;
+        private DataGridView dataGridView1;
     }
 }

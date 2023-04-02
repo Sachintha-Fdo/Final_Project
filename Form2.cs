@@ -53,5 +53,25 @@ namespace Final_Project
             rd.Show();
             this.Hide();
         }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void receivedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 f7 = new Form7();
+            f7.Show();
+            this.Hide();
+        }
+
+        private void sentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.Show();
+            this.Hide();
+        }
     }
 }

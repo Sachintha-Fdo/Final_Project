@@ -53,6 +53,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxValueToSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.receivedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +111,9 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.receivedToolStripMenuItem,
+            this.sentToolStripMenuItem});
             resources.ApplyResources(this.searchToolStripMenuItem, "searchToolStripMenuItem");
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
@@ -214,6 +219,17 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // receivedToolStripMenuItem
+            // 
+            this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
+            resources.ApplyResources(this.receivedToolStripMenuItem, "receivedToolStripMenuItem");
+            this.receivedToolStripMenuItem.Click += new System.EventHandler(this.receivedToolStripMenuItem_Click);
+            // 
+            // sentToolStripMenuItem
+            // 
+            this.sentToolStripMenuItem.Name = "sentToolStripMenuItem";
+            resources.ApplyResources(this.sentToolStripMenuItem, "sentToolStripMenuItem");
+            // 
             // FormR
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -275,5 +291,7 @@
         private DataGridView dataGridView1;
         private TextBox textBoxValueToSearch;
         private Label label1;
+        private ToolStripMenuItem receivedToolStripMenuItem;
+        private ToolStripMenuItem sentToolStripMenuItem;
     }
 }

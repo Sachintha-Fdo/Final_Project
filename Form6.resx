@@ -114,6 +114,18 @@
   <data name="receiverDetailsToolStripMenuItem.Text" xml:space="preserve">
     <value>Receiver Details</value>
   </data>
+  <data name="receivedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 30</value>
+  </data>
+  <data name="receivedToolStripMenuItem.Text" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="sentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 30</value>
+  </data>
+  <data name="sentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sent</value>
+  </data>
   <data name="searchToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt, style=Bold</value>
   </data>
@@ -667,6 +679,18 @@
     <value>searchToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;searchToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;receivedToolStripMenuItem.Name" xml:space="preserve">
+    <value>receivedToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;receivedToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sentToolStripMenuItem.Name" xml:space="preserve">
+    <value>sentToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sentToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

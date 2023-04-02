@@ -42,7 +42,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +59,12 @@
             this.packageSentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiverDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.receivedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,14 +193,6 @@
             this.label7.Size = new System.Drawing.Size(122, 21);
             this.label7.TabIndex = 12;
             this.label7.Text = "Courier Service";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(607, 224);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(152, 27);
-            this.textBox8.TabIndex = 15;
             // 
             // label8
             // 
@@ -383,11 +378,28 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.receivedToolStripMenuItem,
+            this.sentToolStripMenuItem});
             this.searchToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.searchToolStripMenuItem.Text = "Search ";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
+            // receivedToolStripMenuItem
+            // 
+            this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
+            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
+            this.receivedToolStripMenuItem.Text = "Received";
+            this.receivedToolStripMenuItem.Click += new System.EventHandler(this.receivedToolStripMenuItem_Click);
+            // 
+            // sentToolStripMenuItem
+            // 
+            this.sentToolStripMenuItem.Name = "sentToolStripMenuItem";
+            this.sentToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
+            this.sentToolStripMenuItem.Text = "Sent";
             // 
             // comboBox1
             // 
@@ -414,12 +426,28 @@
             this.label16.TabIndex = 60;
             this.label16.Text = "Gate No.";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(607, 228);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.TabIndex = 62;
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.Transaction = null;
+            this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.menuStrip1);
@@ -433,7 +461,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
@@ -476,7 +503,6 @@
         private Label label6;
         private TextBox textBox7;
         private Label label7;
-        private TextBox textBox8;
         private Label label8;
         private TextBox textBox9;
         private Label label9;
@@ -496,5 +522,9 @@
         private ToolStripMenuItem searchToolStripMenuItem;
         private ComboBox comboBox1;
         private Label label16;
+        private ToolStripMenuItem receivedToolStripMenuItem;
+        private ToolStripMenuItem sentToolStripMenuItem;
+        private ComboBox comboBox2;
+        private MySqlConnector.MySqlCommand mySqlCommand1;
     }
 }

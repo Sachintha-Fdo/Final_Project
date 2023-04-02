@@ -64,6 +64,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.receivedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,11 +137,15 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.receivedToolStripMenuItem,
+            this.sentToolStripMenuItem});
             this.searchToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.searchToolStripMenuItem.Text = "Search ";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // button2
             // 
@@ -436,6 +442,19 @@
             this.comboBox1.Size = new System.Drawing.Size(35, 23);
             this.comboBox1.TabIndex = 59;
             // 
+            // receivedToolStripMenuItem
+            // 
+            this.receivedToolStripMenuItem.Name = "receivedToolStripMenuItem";
+            this.receivedToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.receivedToolStripMenuItem.Text = "Received";
+            this.receivedToolStripMenuItem.Click += new System.EventHandler(this.receivedToolStripMenuItem_Click);
+            // 
+            // sentToolStripMenuItem
+            // 
+            this.sentToolStripMenuItem.Name = "sentToolStripMenuItem";
+            this.sentToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sentToolStripMenuItem.Text = "Sent";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -521,5 +540,7 @@
         private Label label16;
         private ComboBox comboBox1;
         public DateTimePicker dateTimePicker1;
+        private ToolStripMenuItem receivedToolStripMenuItem;
+        private ToolStripMenuItem sentToolStripMenuItem;
     }
 }
